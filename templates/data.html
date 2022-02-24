@@ -1,0 +1,28 @@
+<html>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   <body>
+   <div class="topnav">
+  <a href="/data">Data</a>
+  <a href="/">Home</a>
+</div>
+
+      <table border = 1 class = "center">
+         <thead>
+            <th>Movie Review</th>
+             <th>Prediction</th>
+            
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["movie_review"]}}</td>
+               <td>{{row["prediction"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      <div style="text-align:center"> 
+         <a href = "/"> Back </a>
+      </div>
+      
+   </body>
+</html>
